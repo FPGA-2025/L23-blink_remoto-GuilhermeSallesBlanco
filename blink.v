@@ -19,6 +19,9 @@ always @(posedge clk or negedge rst_n) begin
         if(counter >= HALF_SECOND - 1) begin
             counter <= 32'b0;
             leds [0] <= ~leds[0];
+            leds [2] <= ~leds[2];
+            leds [4] <= ~leds[4];
+            leds [6] <= ~leds[6];
         end else begin
             counter <= counter + 1;
         end
